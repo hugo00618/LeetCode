@@ -8,41 +8,13 @@
 
 #include <iostream>
 #include <vector>
+#include "ListNode.cpp"
 
 using namespace std;
 
 class _19 {
     
 public:
-    struct ListNode {
-        int val;
-        ListNode *next;
-        ListNode(int x) : val(x), next(NULL) {}
-    };
-    
-    //    ListNode* removeNthFromEnd(ListNode* head, int n) {
-    //        vector<ListNode*> listNodes = {};
-    //
-    //        ListNode* it = head;
-    //        while (it != NULL) {
-    //            listNodes.push_back(it);
-    //            it = it->next;
-    //        }
-    //
-    //        int removingIdx = listNodes.size() - n;
-    //        if (removingIdx == 0) { // removing first node
-    //            return head->next;
-    //        } else {
-    //            ListNode *oneBeforeRemovingNode = listNodes[listNodes.size() - n - 1];
-    //            ListNode *removingNode = oneBeforeRemovingNode->next;
-    //
-    //            oneBeforeRemovingNode->next = removingNode->next;
-    //            return head;
-    //        }
-    //    }
-    
-    // 1 2 3
-    // 2
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         ListNode **t1 = &head;
         ListNode *t2 = head;

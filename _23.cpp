@@ -1,5 +1,5 @@
 //
-//  _19.cpp
+//  _23.cpp
 //  LeetCode
 //
 //  Created by Hugo Yu on 2017-09-14.
@@ -12,8 +12,7 @@
 
 using namespace std;
 
-class _21 {
-public:
+class _23 {
     ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
         ListNode r = ListNode(0);
         ListNode *it = &r;
@@ -32,5 +31,21 @@ public:
         it->next = l1 ? l1 : l2;
         
         return r.next;
+    }
+public:
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        if (lists.empty()) {
+            return {};
+        } else if (lists.size() == 1) {
+            return lists[0];
+        } else if (lists.size() == 2) {
+            return mergeTwoLists(lists[0], lists[1]);
+        } else {
+            vector<ListNode*>::iterator mid = lists.begin() + lists.size() / 2;
+            vector<ListNode*> left(lists.begin(), mid);
+            vector<ListNode*> right(mid, lists.end());
+            vector<ListNode*> merged = {mergeKLists(left), mergeKLists(right)};
+            return mergeKLists(merged);
+        }
     }
 };
