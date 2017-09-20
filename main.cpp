@@ -10,7 +10,7 @@
 #include <map>
 #include <vector>
 #include "ListNode.cpp"
-#include "_41.cpp"
+#include "_43.cpp"
 
 using namespace std;
 
@@ -19,11 +19,9 @@ void printVector(vector<string> strs);
 void printListNode(ListNode* listNode);
 
 int main(int argc, const char * argv[]) {
-    _41 solution = *new _41();
+    _43 solution = *new _43();
     
-    vector<int> nums = {1,1};
-    
-    cout << solution.firstMissingPositive(nums) << endl;
+    cout << solution.multiply("98", "9") << endl;
 }
 
 void printVector(vector<int> ints) {
