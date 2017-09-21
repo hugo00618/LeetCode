@@ -11,7 +11,7 @@
 #include <vector>
 #include <string>
 #include "ListNode.cpp"
-#include "_48.cpp"
+#include "_49.cpp"
 
 using namespace std;
 
@@ -20,15 +20,17 @@ void printVector(vector<string> strs);
 void printListNode(ListNode* listNode);
 
 int main(int argc, const char * argv[]) {
-    _48 solution = *new _48();
+    _49 solution = *new _49();
     
-    vector<vector<int>> nums = {{5, 1, 9,11},{2, 4, 8,10},{13, 3, 6, 7},{15,14,12,16}};
-    
-    solution.rotate(nums);
-    
-    for (vector<int> permutation: nums) {
-        printVector(permutation);
+    vector<string> strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+    vector<vector<string>> res = solution.groupAnagrams(strs);
+    for (vector<string> myRes: res) {
+        for (string myStr: myRes) {
+            cout << myStr << " ";
+        }
+        cout << endl;
     }
+
 }
 
 void printVector(vector<int> ints) {
