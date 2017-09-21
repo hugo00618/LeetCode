@@ -11,7 +11,7 @@
 #include <vector>
 #include <string>
 #include "ListNode.cpp"
-#include "_47.cpp"
+#include "_48.cpp"
 
 using namespace std;
 
@@ -20,13 +20,13 @@ void printVector(vector<string> strs);
 void printListNode(ListNode* listNode);
 
 int main(int argc, const char * argv[]) {
-    _47 solution = *new _47();
+    _48 solution = *new _48();
     
-    vector<int> nums = {1,1,2};
+    vector<vector<int>> nums = {{5, 1, 9,11},{2, 4, 8,10},{13, 3, 6, 7},{15,14,12,16}};
     
-    vector<vector<int>> res = solution.permuteUnique(nums);
+    solution.rotate(nums);
     
-    for (vector<int> permutation: res) {
+    for (vector<int> permutation: nums) {
         printVector(permutation);
     }
 }
