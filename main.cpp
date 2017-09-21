@@ -9,8 +9,9 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <string>
 #include "ListNode.cpp"
-#include "_43.cpp"
+#include "_45.cpp"
 
 using namespace std;
 
@@ -19,9 +20,11 @@ void printVector(vector<string> strs);
 void printListNode(ListNode* listNode);
 
 int main(int argc, const char * argv[]) {
-    _43 solution = *new _43();
+    _45 solution = *new _45();
     
-    cout << solution.multiply("98", "9") << endl;
+    vector<int> nums = {1,2};
+    
+    cout << solution.jump(nums) << endl;
 }
 
 void printVector(vector<int> ints) {
