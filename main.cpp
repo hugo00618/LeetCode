@@ -11,25 +11,23 @@
 #include <vector>
 #include <string>
 #include "ListNode.cpp"
-#include "_49.cpp"
+#include "FirstOccurrence.cpp"
+
 
 using namespace std;
 
 void printVector(vector<int> ints);
 void printVector(vector<string> strs);
 void printListNode(ListNode* listNode);
-
+//            i
+// 01234567890123456789
+// CGTGCCTACTTACTTAC
+//     CTTACTTAC
 int main(int argc, const char * argv[]) {
-    _49 solution = *new _49();
     
-    vector<string> strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
-    vector<vector<string>> res = solution.groupAnagrams(strs);
-    for (vector<string> myRes: res) {
-        for (string myStr: myRes) {
-            cout << myStr << " ";
-        }
-        cout << endl;
-    }
+    FirstOccurence solution = *new FirstOccurence();
+    
+    cout << solution.firstOccurrence("CGTGCCTACTTACTTAC", "CTTACTTAC") << endl;
 
 }
 
